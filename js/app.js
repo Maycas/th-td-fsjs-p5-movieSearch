@@ -1,7 +1,7 @@
 var app = (function ($) {
 
     var app = {
-        omdbAPI: "http://www.omdbapi.com/?",
+        omdbAPI: "https://www.omdbapi.com/?",
         $movieList: $("#movies"),
 
         getTitle: function () {
