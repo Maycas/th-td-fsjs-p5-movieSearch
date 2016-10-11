@@ -37,7 +37,7 @@ input {
   transition: border-color .4s;
 }
 
-input ~ input {
+input~input {
   margin-left: 5px;
 }
 
@@ -56,6 +56,7 @@ button {
   z-index: 2000;
 }
 
+
 /* ================================= 
   Page Components
 ==================================== */
@@ -71,12 +72,15 @@ button {
 .search-form input:last-of-type {
   margin-right: -40px;
 }
+
 .search-form input:nth-of-type(1) {
   width: 65%;
 }
+
 .search-form input:nth-of-type(2) {
   width: 35%;
 }
+
 .search-form input:only-of-type {
   width: 100%;
   padding-right: 35px;
@@ -98,9 +102,10 @@ button {
   display: block;
 }
 
+
 /* MOVIE LIST COMPONENTS -------- */
 
-.no-movies  {
+.no-movies {
   color: #b0b0b0;
   height: 140px;
   margin-top: 65px;
@@ -148,6 +153,7 @@ button {
   margin: auto;
 }
 
+
 /* ================================= 
   Layout Styles
 ==================================== */
@@ -168,6 +174,7 @@ button {
   min-height: 80px;
   z-index: 1000;
 }
+
 
 /* ================================= 
   Helper Classes
@@ -190,6 +197,7 @@ button {
   width: 1px;
 }
 
+
 /* ================================= 
   Media Queries
 ==================================== */
@@ -205,57 +213,48 @@ button {
     float: left;
     width: 50%;
   }
-
   .movie-list .no-movies {
     float: none;
     width: 100%;
   }
-
   .poster-wrap {
     height: 290px;
     border: 1px solid white;
     overflow: hidden;
   }
-
   .movie-poster {
     width: 100%;
     min-height: 100%;
     -webkit-transition: -webkit-transform .4s ease-out;
     transition: transform .4s ease-out;
   }
-
   .poster-wrap:hover .movie-poster {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
   }
-
- .movie-title {
+  .movie-title {
     padding-right: 1.25em;
- }
-
+  }
 }
 
 @media (min-width: 769px) {
   body {
     padding-top: 115px;
   }
-
   .main-title {
     float: left;
   }
-
   .search-form {
     width: 422px;
     float: right;
     margin-top: 34px;
   }
-
   .movie-list li {
     width: 33.333333333%;
   }
 }
 
-@media (min-width: 769px) and (max-width: 999px) { 
+@media (min-width: 769px) and (max-width: 999px) {
   .movie-list li:nth-of-type(3n+1) {
     clear: left;
   }
@@ -265,8 +264,78 @@ button {
   .movie-list li {
     width: 25%;
   }
-
   .movie-list li:nth-of-type(4n+1) {
     clear: left;
   }
+}
+
+
+/* ================================= 
+Movie Details Page
+==================================== */
+
+#movie-detail {
+  display: none;
+}
+
+.jumbotron {
+  background-color: #444;
+  color: #fff;
+  font-weight: normal;
+  padding: 20px 0;
+}
+
+.jumbotron h2 {
+  font-weight: 300;
+  font-size: 2em;
+  margin-bottom: 1%;
+}
+
+.jumbotron .heading,
+.movie-detail-description {
+  margin: 3% auto 0 40%;
+}
+
+.heading {
+  margin-bottom: 20px;
+}
+
+.movie-detail-rating {
+  color: #aaa;
+  margin-top: 0;
+}
+
+.jumbotron a {
+  color: #aaa;
+}
+
+.jumbotron a:hover {
+  color: #fff;
+}
+
+.jumbotron a span {
+  color: #fff;
+}
+
+.movie-detail-poster,
+.jumbotron a {
+  margin-left: 2.5%;
+}
+
+.movie-detail-poster {
+  position: absolute;
+  top: 26%;
+  border: solid #fff 10px;
+}
+
+#movie-detail-synopsis {
+  color: #555;
+}
+
+.button {
+  background-color: lightseagreen;
+  padding: 10px 20px;
+  color: #fff;
+  margin-top: 2em;
+  display: inline-block;
 }
