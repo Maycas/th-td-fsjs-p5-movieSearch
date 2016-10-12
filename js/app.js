@@ -96,7 +96,7 @@
         searchMovieDetails: function (title) {
             $.getJSON(this.omdbAPI, {
                 t: title,
-                plot: "short",
+                plot: "full",
                 type: "movie",
                 r: "json"
             }).done(this.printMovieDetails).fail(this.showError);
