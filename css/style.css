@@ -325,8 +325,9 @@ Movie Details Page
 .movie-detail-poster {
   margin-top: -12%;
   border: solid #fff 10px;
-  min-width: 300px;
-  max-width: 300px;
+  min-width: 20%;
+  max-width: 40%;
+  width: 30%;
   float: left;
 }
 
@@ -344,4 +345,46 @@ Movie Details Page
   color: #fff;
   margin-top: 2em;
   display: inline-block;
+}
+
+@media (max-width: 790px) {
+  .main-content,
+  .main-header {
+    width: 100%;
+  }
+  .jumbotron h2 {
+    font-size: 1.65em;
+  }
+  #movie-detail-synopsis,
+  .movie-detail-title {
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .main-header {
+    position: absolute;
+  }
+  .movie-detail-poster {
+    float: none;
+    min-width: 80%;
+    max-width: 80%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .jumbotron .heading,
+  .movie-detail-description {
+    margin: 0;
+    text-align: center;
+  }
+  .movie-detail-description {
+    padding: 0 2%;
+  }
+  .jumbotron h2 {
+    font-size: 2em;
+  }
+  .button {
+    width: 60%;
+    padding: 20px;
+  }
 }

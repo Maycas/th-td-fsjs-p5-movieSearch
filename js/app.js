@@ -83,7 +83,8 @@
             $.getJSON(this.omdbAPI, {
                 s: title,
                 y: year,
-                type: "movie"
+                type: "movie",
+                r: "json"
             }).done(this.printMoviesResults).fail(this.showError);
         },
 
@@ -96,7 +97,8 @@
             $.getJSON(this.omdbAPI, {
                 t: title,
                 plot: "short",
-                type: "movie"
+                type: "movie",
+                r: "json"
             }).done(this.printMovieDetails).fail(this.showError);
         },
 
