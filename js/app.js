@@ -246,9 +246,11 @@
          * and registering the listeners for both the list and the details placeholder
          */
         init: function () {
+            // Setup to movie list view
             this.$movieList.show();
             this.registerMainMovieListListeners();
 
+            // Setup listeners to the movie detail view
             this.registerMovieDetailListeners();
         }
     };
