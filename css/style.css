@@ -293,7 +293,7 @@ Movie Details Page
 
 .jumbotron .heading,
 .movie-detail-description {
-  margin: 3% auto 0 40%;
+  margin: 3% auto 0 35%;
 }
 
 .heading {
@@ -323,9 +323,15 @@ Movie Details Page
 }
 
 .movie-detail-poster {
-  position: absolute;
-  top: 26%;
+  margin-top: -12%;
   border: solid #fff 10px;
+  min-width: 300px;
+  max-width: 300px;
+  float: left;
+}
+
+.movie-detail-poster img {
+  width: 100%;
 }
 
 #movie-detail-synopsis {
@@ -333,7 +339,7 @@ Movie Details Page
 }
 
 .button {
-  background-color: lightseagreen;
+  background-color: #20b2aa;
   padding: 10px 20px;
   color: #fff;
   margin-top: 2em;
